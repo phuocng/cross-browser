@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 tags: post
 title: CSS fallback properties
-index: 3
+index: 4
 ---
 
 A CSS class can consist of many declarations whose each of them has the syntax of `property: value` syntax:
