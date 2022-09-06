@@ -1,0 +1,70 @@
+---
+layout: layouts/post.njk
+title: Conditional HTML classes
+index: 2
+---
+
+The [previous post](/conditional-comments) introduces the technique to load styles for a given IE version.
+Let's revisit how the styles are organized:
+
+```html
+<link href="styles.css" rel="stylesheet" />
+
+<!--[if IE 8]>
+    <link href="fix-ie8.css" rel="stylesheet" />
+<![endif]-->
+
+<!--[if IE 9]>
+    <link href="fix-ie9.css" rel="stylesheet" />
+<![endif]-->
+```
+
+As we can see, the approach adds one more HTTP request. For example, IE 8 will load `styles.css` and `fix-ie8.css` files as separate requests.
+We can reduce the number of requests by using the conditional comments for the root `html` element:
+
+```html
+<!--[if lt IE 7]><html class="ie6"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
+```
+
+The root `html` element will have an additional CSS class depending on the current version of IE which visitors use. For example, IE 9 browser will add `ie9` CSS class.
+The styles are now combined into a single source
+
+```html
+<link href="all-styles.css" rel="stylesheet" />
+```
+
+It contains the fixes for different IE versions:
+
+```css
+.card {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Background with opacity is only available on IE 9 and later */
+.ie6 .card,
+.ie7 .card,
+.ie8 .card {
+    background: #ccc;
+}
+```
+
+The issue of the number of HTTP requests is resolved. However, the styles now contain many duplication codes. We can fix the issue by adding more CSS classes to the `html` element:
+
+```html
+<!--[if lt IE 7]><html class="lt-ie7 lt-ie8 lt-ie9"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+```
+
+Additional styles for `card` on IE 6, 7, 8 now can be combined into a single class declaration:
+
+```css
+.lt-ie9 .card {
+    ...;
+}
+```
