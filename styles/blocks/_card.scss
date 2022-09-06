@@ -1,24 +1,39 @@
 .card__item {
-    border: 1px solid #e6e6e6;
+    background-color: #fff;
     border-radius: 0.5rem;
-    height: 100%;
-    text-align: center;
-}
-.card__item:hover {
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem 2.5rem 1rem 1rem;
+    position: relative;
+
+    &::before {
+        color: #9ca3af;
+        content: attr(data-index);
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.5rem;
+        padding: 0.75rem;
+        font-weight: 500;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+        transform: translate(50%, -50%);
+    }
 }
+
 .card__link {
-    display: block;
-    height: 100%;
-    padding: 1rem;
-    text-decoration: none;
-}
-.card__title {
-    color: #000;
+    color: #6366f1;
     font-size: 1.25rem;
-    font-weight: 600;
-    margin: 1rem 0;
-}
-.card__desc {
-    color: #53657b;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
 }
