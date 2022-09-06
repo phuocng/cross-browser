@@ -1,9 +1,12 @@
 const fs = require('fs');
 const markdownIt = require('markdown-it');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function(eleventyConfig) {
     // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy('assets');
+
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     let markdownLibrary = markdownIt({
         html: true,
