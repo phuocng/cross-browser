@@ -1,0 +1,38 @@
+.post {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    margin: 8rem 0 2rem 0;
+    padding: 4rem 2rem 2rem 2rem;
+    position: relative;
+}
+
+.post__index {
+    /* Size */
+    height: 10rem;
+    width: 10rem;
+
+    /* Absolute position */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Make it like circle */
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 0.25);
+    font-size: 4rem;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.post__heading {
+    color: #6366f1;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}

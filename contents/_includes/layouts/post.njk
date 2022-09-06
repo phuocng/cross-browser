@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+    <div class="post">
+        <div class="post__index">{{ index }}</div>
+        <h1 class="post__heading">{{ title }}</h1>
+        {{ content | safe }}
+    </div>
+</div>

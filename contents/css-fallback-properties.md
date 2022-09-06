@@ -12,7 +12,7 @@ A CSS class can consist of many declarations whose each of them has the syntax o
 }
 ```
 
-We can set different values for the same property. The browser will try to use the last declaration. In the case it can't recognize the declaration, it will fallback to the previous value until the supported value is found.
+We can set different values for the same property. A value coming later overrides values before it. The browser will try to use the last declaration. In the case it can't recognize the declaration, it will fallback to the previous value until the supported value is found.
 
 It is the right place to add prefixes for browser vendors here. Remember in the old days, we often use this technique to set a linear gradient for the header element:
 
