@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "css": "rm -rf _site/styles && mkdir _site/styles && sass --no-source-map styles/index.scss styles/index.temp.css && postcss styles/index.temp.css > _site/styles/index.min.css && rm -rf styles/index.temp.css",
+        "build": "npm run css",
+        "deploy": "npm run build && netlify deploy --dir=_site",
+        "format": "prettier --write \"**/*.+(json|md|scss)\"",
+        "start": "npx @11ty/eleventy --serve",
+        "watch": "npx @11ty/eleventy --watch"
+    },
+    "devDependencies": {
+        "cssnano": "^5.1.13",
+        "postcss": "^8.4.16",
+        "postcss-cli": "^10.0.0",
+        "postcss-import": "^15.0.0",
+        "prettier": "^2.7.1",
+        "sass": "^1.54.8"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^1.0.2",
+        "markdown-it": "^13.0.1"
+    }
+}

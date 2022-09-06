@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.footer__col {
+    margin-right: 1.5rem;
+}
+.footer__heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.footer__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer__item {
+    margin-bottom: 0.25rem;
+}
+.footer__link {
+    color: #000;
+    text-decoration: none;
+}
+.footer__link:hover {
+    text-decoration: underline;
+}

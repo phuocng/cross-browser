@@ -1,0 +1,17 @@
+body {
+    font-family: Inter, -apple-system, Arial, ui-sans-serif, system-ui;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    width: 64rem;
+}
+.divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.text--primary {
+    color: #6366f1;
+}
