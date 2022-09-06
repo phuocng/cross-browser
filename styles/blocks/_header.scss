@@ -1,0 +1,38 @@
+.header {
+    align-items: center;
+    display: flex;
+}
+.header__brand {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-right: auto;
+    text-decoration: none;
+}
+.header__brand,
+.header__brand:visited {
+    color: #000;
+}
+
+.header__nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header__link {
+    align-items: center;
+    color: #222;
+    display: flex;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+.header__link--primary {
+    background-color: #6366f1;
+    color: #fff;
+    border-radius: 9999px;
+}
+.header__link img {
+    height: 1.5rem;
+    width: auto;
+    margin-right: 0.5rem;
+}

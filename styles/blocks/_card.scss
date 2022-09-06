@@ -1,0 +1,24 @@
+.card__item {
+    border: 1px solid #e6e6e6;
+    border-radius: 0.5rem;
+    height: 100%;
+    text-align: center;
+}
+.card__item:hover {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+}
+.card__link {
+    display: block;
+    height: 100%;
+    padding: 1rem;
+    text-decoration: none;
+}
+.card__title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.card__desc {
+    color: #53657b;
+}
