@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+tags: post
 title: Conditional comments
 index: 1
 ---

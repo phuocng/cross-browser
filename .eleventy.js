@@ -14,6 +14,17 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.setLibrary('md', markdownLibrary);
 
+    eleventyConfig.addCollection('sortByIndex', function(collectionApi) {
+        return collectionApi.getAll()
+            .filter(function(item) {
+                let extension = item.inputPath.split('.').pop();
+                return extension === 'md';
+            })
+            .sort(function(a, b) {
+                return a.data.index - b.data.index;
+            });
+    });
+
     return {
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
