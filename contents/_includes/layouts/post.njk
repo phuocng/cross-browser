@@ -5,6 +5,6 @@ layout: layouts/base.njk
     <div class="post">
         <div class="post__index">{{ index }}</div>
         <h1 class="post__heading">{{ title }}</h1>
-        {{ content | safe }}
+        <div class="post__content">{{ content | safe }}</div>
     </div>
 </div>

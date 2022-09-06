@@ -1,0 +1,49 @@
+---
+layout: layouts/post.njk
+title: Conditional comments
+index: 99
+---
+
+Conditional comments have the same syntax as an HTML comment (`<!-- -->`), but they only work on the Internet Explorer browser (IE).
+Despite the fact that the technique isn't used on the web nowadays, I still keep it here to remind us of what we had to deal with many years ago.
+
+The content inside the comments are only available on IE 5-9, and are ignored by other browsers. In the older versions of IE, starting from IE 10, the syntax is disabled.
+
+```html
+<!--[if IE]>Only IE sees this<![endif]-->
+```
+
+You are able to add some constraint to restricts the IE versions, for example:
+
+```html
+<!--[if IE 8]>Only IE 8 sees this<![endif]-->
+
+<!--[if gte IE 8]>Only IE 8 and higher versions see this<![endif]-->
+
+<!--[if lte IE 8]>Only IE 8 and lower versions see this<![endif]-->
+```
+
+The special characters indicating the IE versions are listed as following:
+
+| Character | Description              |
+| --------- | ------------------------ |
+| `gt`      | Greater than             |
+| `gte`     | Greater than or equal to |
+| `lt`      | Less than                |
+| `lte`     | Less than or equal to    |
+
+You can apply styles or fixes for a given IE version such as
+
+```html
+<link href="styles.css" rel="stylesheet" />
+
+<!--[if IE 8]>
+    <link href="fix-ie8.css" rel="stylesheet" />
+<![endif]-->
+
+<!--[if IE 9]>
+    <link href="fix-ie9.css" rel="stylesheet" />
+<![endif]-->
+```
+
+The `styles.css` file contains the styles working for modern browsers whereas `fix-ie8.css` and `fix-ie9.css` files provide the fixes for IE 8 and IE 9 respectively.
