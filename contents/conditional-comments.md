@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Conditional comments
-index: 99
+index: 1
 ---
 
 Conditional comments have the same syntax as an HTML comment (`<!-- -->`), but they only work on the Internet Explorer browser (IE).
