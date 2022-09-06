@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+}
+.nav__item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background: #60a5fa;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    color: #f9fafb;
+    padding: 0.25rem 1rem;
+
+    text-decoration: none;
+}
+.nav__item--prev {
+    margin-right: auto;
+}
+.nav__item--next {
+    margin-left: auto;
+}
