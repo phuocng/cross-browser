@@ -1,0 +1,38 @@
+---
+layout: layouts/post.njk
+tags: post
+title: Normalize CSS
+index: 7
+---
+
+Each browser provides a set of default styles which are applied for every web page it renders. The default style sheet is also known as the user-agent style sheet.
+For example, here is the default styles provided by popular browsers:
+
+-   [Chrome default styles](https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css)
+-   [Firefox default styles](https://hg.mozilla.org/mozilla-central/file/tip/layout/style/res/html.css)
+-   [Safari default styles](https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css)
+
+Since they aren't the same as each other, a web page looks differently on each browser. Normalizing CSS is a technique to fix the issue. It tries to make the default styles of native elements consistently cross browsers.
+
+For example, we can use the HTML 5 `hidden` attribute to hide an element completely:
+
+```html
+<input type="text" hidden />
+```
+
+However, the attribute isn't supported on IE 10. So we should include the following declaration:
+
+```css
+[hidden] {
+    display: none;
+}
+```
+
+[normalize.css](https://github.com/necolas/normalize.css) is a popular library providing these kinds of fixes. If you take a look at [its source code](https://github.com/necolas/normalize.css/blob/master/normalize.css), you'll realize that
+there are lot of bug fixes for different browsers such as IE, Chrome, Firefox, Safari there.
+
+Popular CSS libraries include or build their normalized CSS on top of `normalize.css`, for example:
+
+-   [Bootstrap's reboot](https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss)
+-   [Tachyons](https://github.com/tachyons-css/tachyons/blob/main/src/_normalize.css)
+-   [TailwindCSS's preflight](https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css)
