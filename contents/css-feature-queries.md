@@ -69,3 +69,13 @@ By default, the CSS grid is used for the `list` class. It will fallback to the C
 
 What could happen if the browser doesn't understand both CSS grid syntax and `@supports`? IE 11 is one of such browsers. In that scenario, all of our styles aren't effective.
 It's recommended to avoid using the `not` operator of CSS feature queries.
+
+## Check for feature queries programmatically
+
+In addition to the declarative way of using `@support`, it's possible to check if a particular CSS declaration is supported programmatically:
+
+```js
+if (!CSS || !CSS.supports('display', 'grid')) {
+    /* CSS grid isn't supported */
+}
+```

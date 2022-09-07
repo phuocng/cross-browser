@@ -1,6 +1,7 @@
 const fs = require('fs');
 const markdownIt = require('markdown-it');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
     // Copy the `img` and `css` folders to the output
@@ -23,6 +24,17 @@ module.exports = function(eleventyConfig) {
             .sort(function(a, b) {
                 return a.data.index - b.data.index;
             });
+    });
+
+    eleventyConfig.addTransform('minify-html', function(content) {
+        if (this.outputPath && this.outputPath.endsWith('.html')) {
+            return htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            });
+        }    
+        return content;
     });
 
     return {
