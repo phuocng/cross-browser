@@ -35,3 +35,7 @@ Do we need to track properties which have been standardized and work without bei
 
 Fortunately, there are more tools to automate the process. They prefix a CSS property automatically based on the data covering which browsers (including versions) support that property.
 [Autoprefixer](https://github.com/postcss/autoprefixer) is one of the most popular tools.
+
+## See also
+
+-   [JavaScript vendor prefixes](/javascript-vendor-prefixes)
