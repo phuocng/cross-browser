@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: Write CSS rules for specific browsers
 index: 8
 ---

@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: Conditional HTML classes based on user agent
 index: 3
 ---

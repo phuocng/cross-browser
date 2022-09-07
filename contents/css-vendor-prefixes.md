@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: CSS vendor prefixes
 index: 6
 ---
