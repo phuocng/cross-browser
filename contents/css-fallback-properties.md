@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: CSS fallback properties
 index: 4
 ---

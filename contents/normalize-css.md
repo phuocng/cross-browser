@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: Normalize CSS
 index: 7
 ---

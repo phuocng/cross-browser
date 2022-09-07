@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: Conditional HTML classes
 index: 2
 ---

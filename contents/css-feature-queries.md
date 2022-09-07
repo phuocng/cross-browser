@@ -1,6 +1,5 @@
 ---
 layout: layouts/post.njk
-tags: post
 title: CSS feature queries
 index: 5
 ---
