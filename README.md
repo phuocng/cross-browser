@@ -1,3 +1,3 @@
-# cross-browser
+# Cross browser compatibility issue
 
-Techinques to deal with cross browser issues on the front-end side
+Common techinques to deal with cross browser issues on the front-end side.
