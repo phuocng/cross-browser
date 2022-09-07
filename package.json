@@ -13,6 +13,7 @@
     },
     "devDependencies": {
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+        "html-minifier": "^4.0.0",
         "prettier": "^2.7.1",
         "sass": "^1.54.8"
     },
