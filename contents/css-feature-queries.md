@@ -48,7 +48,7 @@ It's good to know that we can use the `and`, `or` and `not` operators to build a
 }
 ```
 
-## Don't use the not operator
+## Avoid using the not operator
 
 The `not` operator tells the browser to apply styles declared inside the `@support` block if it doesn't not support the input declaration.
 Let's revise the example above with the opposite approach:

@@ -29,7 +29,7 @@ As soon as the `ie11` class added to the root `html` element, you can add more s
 
 ```css
 .ie11 .otherClass {
-    ...;
+    /* Styles for IE 11 */
 }
 ```
 

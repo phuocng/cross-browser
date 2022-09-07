@@ -66,6 +66,6 @@ Additional styles for `card` on IE 6, 7, 8 now can be combined into a single cla
 
 ```css
 .lt-ie9 .card {
-    ...;
+    /* Styles for IEs before 9 */
 }
 ```
