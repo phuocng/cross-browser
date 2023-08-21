@@ -1,10 +1,10 @@
 ---
-layout: layouts/post.njk
-title: Conditional HTML classes
+created: '2022-09-06'
 index: 2
+title: Conditional HTML classes
 ---
 
-The [previous post](/conditional-comments) introduces the technique to load styles for a given IE version.
+The [previous post](https://phuoc.ng/collection/cross-browser-compatible/conditional-comments) introduces the technique to load styles for a given IE version.
 Let's revisit how the styles are organized:
 
 ```html
@@ -27,7 +27,7 @@ We can reduce the number of requests by using the conditional comments for the r
 <!--[if IE 7]><html class="ie7"><![endif]-->
 <!--[if IE 8]><html class="ie8"><![endif]-->
 <!--[if IE 9]><html class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]--></html>
 ```
 
 The root `html` element will have an additional CSS class depending on the current version of IE which visitors use. For example, IE 9 browser will add `ie9` CSS class.
@@ -58,7 +58,7 @@ The issue of the number of HTTP requests is resolved. However, the styles now co
 <!--[if lt IE 7]><html class="lt-ie7 lt-ie8 lt-ie9"><![endif]-->
 <!--[if IE 7]><html class="lt-ie8 lt-ie9"><![endif]-->
 <!--[if IE 8]><html class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]--></html>
 ```
 
 Additional styles for `card` on IE 6, 7, 8 now can be combined into a single class declaration:
